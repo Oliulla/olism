@@ -1,4 +1,5 @@
 .terminal-wrapper
+  position: relative
   background-color: #000
   color: #00ff00
   font-family: 'Courier New', Courier, monospace
@@ -11,3 +12,65 @@
 
 .terminal
   white-space: pre-line
+
+.terminal-icon
+  display: flex
+  align-items: center
+  position: fixed
+  bottom: 20px
+  right: 20px
+  background-color: #111
+  color: #0f0
+  padding: 0.4rem 0.4rem
+  border-radius: 8px
+  font-size: 1.5rem
+  cursor: pointer
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5)
+  z-index: 1000
+  transition: transform 0.3s ease
+  &:hover
+    transform: scale(1.1)
+  
+
+.sliding-terminal
+  position: fixed
+  bottom: 0
+  right: 0
+  width: 400px
+  max-width: 90vw
+  height: 450px
+  background-color: #111
+  color: #0f0
+  transform: translate(100%, 100%)
+  transition: transform 0.5s ease
+  z-index: 999
+  border-top-right-radius: 12px
+  border-top-left-radius: 12px
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3)
+  display: flex
+  flex-direction: column
+  overflow: hidden
+
+.sliding-terminal.open
+  transform: translate(0, 0)
+
+.sliding-header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0.5rem 1rem
+  background-color: #222
+  border-bottom: 1px solid #0f0
+
+.sliding-header button
+  background: none
+  border: none
+  color: #0f0
+  font-size: 1.2rem
+  cursor: pointer
+
+.sliding-body
+  flex: 1
+  padding: 1rem
+  overflow-y: auto
+  font-size: 1rem
