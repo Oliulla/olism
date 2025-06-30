@@ -1,3 +1,5 @@
+import TerminalLine from "./TerminalLine";
+
 export default function SlidingTerminal({ isTerminalOpen, setIsTerminalOpen }) {
   return (
     <div className={`sliding-terminal ${isTerminalOpen ? "open" : ""}`}>
@@ -6,8 +8,7 @@ export default function SlidingTerminal({ isTerminalOpen, setIsTerminalOpen }) {
         <button onClick={() => setIsTerminalOpen(false)}>✖</button>
       </div>
       <div className="sliding-body">
-        <p>oli@localhost:~$ whoami</p>
-        <p>I'm a backend dev with class and command line sass 😎</p>
+        <TerminalLine setIsTerminalOpen={setIsTerminalOpen} />
       </div>
     </div>
   );
