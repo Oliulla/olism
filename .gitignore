@@ -1,0 +1,46 @@
+# Node modules (always!)
+node_modules/
+
+# Output directory for builds
+.next/
+out/
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Lock files (pick only one)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Optional: If using Sass
+.sass-cache/
+
+# Optional: if using Cypress or Playwright
+cypress/videos/
+cypress/screenshots/
+playwright-report/
+test-results/
+
+# Optional: Next.js telemetry
+.next/telemetry.json
+
+# Optional: Next.js standalone build (if using `output: 'standalone'`)
+standalone/
