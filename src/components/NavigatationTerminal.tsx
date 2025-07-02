@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TypeWritterSection from "./TypeWritterSection";
 import TerminalIcon from "./icons/TerminalIcon";
 import SlidingTerminal from "./SlidingTerminal";
@@ -8,6 +8,10 @@ import "../styles/terminal.sass";
 
 export default function NavigatationTerminal() {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
+
+  // useEffect(() => {
+  //   setIsTerminalOpen(true);
+  // }, []);
 
   const onClick = () => {
     setIsTerminalOpen((prev) => !prev);

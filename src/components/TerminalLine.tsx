@@ -1,8 +1,7 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-export default function TerminalLine({ setIsTerminalOpen }) {
+export default function TerminalLine({ setIsTerminalOpen, terminalRef }) {
   const [command, setCommand] = useState("help");
-  const terminalRef = useRef(null);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (e.key.length === 1 && !e.ctrlKey && !e.metaKey) {
@@ -16,9 +15,9 @@ export default function TerminalLine({ setIsTerminalOpen }) {
     }
   };
 
-  useEffect(() => {
-    terminalRef.current?.focus();
-  }, []);
+  // useEffect(() => {
+  //   terminalRef.current?.focus();
+  // }, []);
 
   return (
     <div
